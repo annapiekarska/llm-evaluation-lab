@@ -44,3 +44,14 @@ export type LLMEvaluationDatasetResult = {
   qualityGateResult: ExpectedOutcome;
   results: LLMEvaluationResult[];
 };
+export type LLMManualEvaluation = {
+  caseId: string;
+  groundednessScore: EvaluationScore;
+  faithfulnessScore: EvaluationScore;
+  relevanceScore: EvaluationScore;
+  completenessScore: EvaluationScore;
+  answerCorrectnessScore: EvaluationScore;
+  hallucinationRiskScore: EvaluationScore;
+  detectedRiskType: RiskType;
+  evaluationComment: string;
+};
