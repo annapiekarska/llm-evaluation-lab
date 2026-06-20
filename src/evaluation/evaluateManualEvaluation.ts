@@ -14,7 +14,8 @@ export function evaluateManualEvaluation(
     evaluation.faithfulnessScore === 0 ||
     evaluation.answerCorrectnessScore === 0 ||
     evaluation.detectedRiskType === "hallucination" ||
-    evaluation.detectedRiskType === "contradiction"
+    evaluation.detectedRiskType === "contradiction" ||
+    evaluation.detectedRiskType === "unsupported_claim"
   ) {
     finalOutcome = "fail";
   } else if (
